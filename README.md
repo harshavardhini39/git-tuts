@@ -24,11 +24,7 @@
 
 ### Step-02-2: In versions.tf
 ```hcl
-<!-- Copy Button -->
-<button class="copy-button" onclick="copyToClipboard('versionsTfCode')">Copy Code</button>
 
-<!-- Code Block -->
-<pre id="versionsTfCode"><code>
 # Terraform Settings Block
 terraform {
   required_providers {
@@ -43,18 +39,4 @@ provider "aws" {
   profile = "default" # AWS Credentials Profile configured on your local desktop terminal $HOME/.aws/credentials
   region  = "us-east-1"
 }
-</code></pre>
 
-<script>
-// Copy to Clipboard Function
-function copyToClipboard(id) {
-    var copyText = document.getElementById(id);
-    var textArea = document.createElement("textarea");
-    textArea.value = copyText.textContent;
-    document.body.appendChild(textArea);
-    textArea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textArea);
-    alert("Code Copied!");
-}
-</script>
